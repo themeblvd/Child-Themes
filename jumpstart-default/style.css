@@ -27,9 +27,6 @@ Template: jumpstart
 body {
 	background: #f2f2f2;
 }
-#wrapper {
-	padding: 0 10px; /* Maintain gutters on sides as window shrinks */
-}
 #container {
 	background: #ffffff;
 	margin: 0 auto;
@@ -529,9 +526,12 @@ img.size-full {
 ------------------------------------------------- */
 
 @media (max-width: 1000px) {
-	#access li {
-		border-right: none;
+	
+	/* Primary Structure */
+	#container {
+		max-width: 960px;
 	}
+
 }
 
 /* =Optimized for Tablets
@@ -540,6 +540,9 @@ img.size-full {
 @media (max-width: 979px) {	
 	
 	/* Primary Structure */
+	#container {
+		max-width: 748px;
+	}
 	#top,
 	#featured,
 	#main,
@@ -611,7 +614,7 @@ img.size-full {
 	
 	/* Primary Structure */
 	#container {
-		padding: 0 5px;
+		max-width: 480px;
 	}
 	
 	/* Typography */

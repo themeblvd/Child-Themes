@@ -29,9 +29,6 @@ Template: jumpstart
 body {
 	background: #f2f2f2;
 }
-#wrapper {
-	padding: 0 10px; /* Maintain gutters on sides as window shrinks */
-}
 #container {
 	margin: 0 auto;
 	max-width: 980px; /* 1 + 19 + 940 + 19 + 1 = 1,000px */
@@ -540,15 +537,23 @@ img.size-full {
 ------------------------------------------------- */
 
 @media (max-width: 1000px) {
-	#access li {
-		border-right: none;
+	
+	/* Primary Structure */
+	#container {
+		max-width: 960px;
 	}
+
 }
 
 /* =Optimized for Tablets
 ------------------------------------------------- */
 
 @media (max-width: 979px) {	
+
+	/* Primary Structure */
+	#container {
+		max-width: 748px;
+	}
 
 	/* Header */
 	#branding .header_logo {
@@ -608,10 +613,13 @@ img.size-full {
 @media (max-width: 767px) {
 	
 	/* Primary Structure */
-	#container {
+	#wrapper {
 		padding: 0 5px;
 	}
-	
+	#container {
+		max-width: 480px;
+	}
+
 	/* Typography */
 	h1 {
 	  font-size: 24px;
