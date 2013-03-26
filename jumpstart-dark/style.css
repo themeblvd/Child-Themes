@@ -205,6 +205,15 @@ img.size-full {
 	line-height: 40px; /* Shapes the HEIGHT of the 1st level anchors */
 	padding: 0 20px;
 }
+#primary-menu > li:first-child > a {
+	/* Round left corners of first anchor */
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
 #primary-menu > li.current_page_item > a {
 	/* Style current active menu item on 1st level */
 	background: #333333;
@@ -577,8 +586,20 @@ img.size-full {
 		margin-bottom: 10px;
 	}
 	#access li {
+		border: none;
 		float: none;
 		padding: 0;
+	}
+	#access #primary-menu > li:first-child > a {
+		-webkit-border-radius: 3px;
+		-webkit-border-bottom-right-radius: 0;
+		-webkit-border-bottom-left-radius: 0;
+		-moz-border-radius: 3px;
+		-moz-border-radius-bottomright: 0;
+		-moz-border-radius-bottomleft: 0;
+		border-radius: 3px;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 	#access li li a { 
 		padding-left: 20px; 
