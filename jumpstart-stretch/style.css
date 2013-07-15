@@ -6,20 +6,20 @@ Template: jumpstart
 */
 
 /**
- * This is a starter child theme for all of you CSS-hackers. 
- * 
- * This file is a copy of Jump Start's default style.css 
+ * This is a starter child theme for all of you CSS-hackers.
+ *
+ * This file is a copy of Jump Start's default style.css
  * file that has been edited to give you an overall stretched layout.
  *
- * Because the Theme Blvd framework's core styles are contained 
- * in other CSS files prior to style.css, you can safely hack away 
+ * Because the Theme Blvd framework's core styles are contained
+ * in other CSS files prior to style.css, you can safely hack away
  * here to skin your Child theme.
- * 
+ *
  * @link http://dev.themeblvd.com/tutorial/css-hacking/
- * 
- * Note: Because we are copying everything from Jump Start's 
- * style.css into this style.css, there is no need to @import 
- * Jump Start's style.css as you might do in a classic 
+ *
+ * Note: Because we are copying everything from Jump Start's
+ * style.css into this style.css, there is no need to @import
+ * Jump Start's style.css as you might do in a classic
  * WordPress Child theme.
  */
 
@@ -42,33 +42,40 @@ body {
 /* =Global Elements and Typography
 -------------------------------------------------------------- */
 
+html,
 body {
-  color: #666666;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 150%;
+	color: #666666;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 150%;
 }
 h1, h2, h3, h4, h5, h6 {
 	line-height: 130%;
-	margin-bottom: .4em;	
+	margin-bottom: .4em;
 }
 h1 {
-	font-size: 2.3em;
+	font-size: 27px; /* Fallback for older browsers */
+	font-size: 2.3rem;
 }
 h2 {
-	font-size: 1.85em;
+	font-size: 24px; /* Fallback for older browsers */
+	font-size: 1.85rem;
 }
 h3 {
-	font-size: 1.4em;
+	font-size: 18px; /* Fallback for older browsers */
+	font-size: 1.4rem;
 }
 h4 {
-	font-size: 1.1em;
+	font-size: 14px; /* Fallback for older browsers */
+	font-size: 1.1rem;
 }
 h5 {
-	font-size: .92em;
+	font-size: 13px; /* Fallback for older browsers */
+	font-size: 1rem;
 }
 h6 {
-	font-size: .85em;
+	font-size: 11px; /* Fallback for older browsers */
+	font-size: .85rem;
 	color: #999999;
 	text-transform: uppercase;
 }
@@ -78,7 +85,10 @@ a {
 }
 a:hover,
 .tb-text-logo:hover,
-.entry-title a:hover {
+.entry-title a:hover,
+a:focus,
+.tb-text-logo:focus,
+.entry-title a:focus {
 	color: #1a5a78;
 	text-decoration: none;
 }
@@ -108,7 +118,8 @@ article {
 /* Meta */
 .entry-meta {
 	color: #999999;
-	font-size: .90em;
+	font-size: 11px; /* Fallback for older browsers */
+	font-size: .85rem;
 	font-weight: bold;
 	margin: 5px 2px 15px 2px;
 }
@@ -130,7 +141,7 @@ img[class*="wp-image-"] {
 	/* Style all inserted wp images. */
 }
 img.size-full {
-	max-width: 100%;	
+	max-width: 100%;
 	width: auto; /* Prevent stretching of full-size images in IE8 */
 }
 .entry-content img.wp-smiley {
@@ -157,7 +168,8 @@ img.size-full {
 	padding: 0 15px;
 }
 .header_logo_text .tb-text-logo {
-	font-size: 2.3em;
+	font-size: 30px; /* Fallback for older browsers */
+	font-size: 2.3rem;
 	margin: 0;
 }
 .header_logo_text .tb-text-logo a {
@@ -166,7 +178,8 @@ img.size-full {
 .header_logo_text .tagline {
 	color: #888888;
 	font-style: italic;
-	font-size: 1em;
+	font-size: 13px; /* Fallback for older browsers */
+	font-size: 1rem;
 }
 
 /* Primary Navigation */
@@ -224,7 +237,7 @@ img.size-full {
 	padding-right: 12px;
 }
 #primary-menu > [class^="menu-icon-"] > a {
-	/* If a top-level menu item has a an icon, reduce its left 
+	/* If a top-level menu item has a an icon, reduce its left
 	padding. You can add icons to main menu by adding class "menu-icon-{whatever}" */
 	padding-left: 12px;
 }
@@ -319,8 +332,9 @@ img.size-full {
 ----------------------------------------------- */
 
 .post_grid .entry-title {
-	font-size: 15px;
-	line-height: 22px;
+	font-size: 15px; /* Fallback for older browsers */
+	font-size: 1.15rem;
+	line-height: 1.5em;
 }
 
 /* =Comments
@@ -359,7 +373,8 @@ img.size-full {
 #comments .comment-body .comment-meta a {
 	color: #9e9e9e;
 	font-family: Georgia, serif;
-	font-size: .9em;
+	font-size: 11px; /* Fallback for older browsers */
+	font-size: .85rem;
 	font-style: italic;
 }
 #comments .comment-body .fn {
@@ -376,7 +391,8 @@ img.size-full {
 	right: 5px;
 	bottom: 5px;
 }
-#comments .comment-body .reply a:hover {
+#comments .comment-body .reply a:hover,
+#comments .comment-body .reply a:focus {
 	background: #dddddd;
 }
 
@@ -385,7 +401,8 @@ img.size-full {
 #comments .bypostauthor > .comment-body .reply a {
 	/* None in this theme */
 }
-#comments .bypostauthor > .comment-body .reply a:hover {
+#comments .bypostauthor > .comment-body .reply a:hover,
+#comments .bypostauthor > .comment-body .reply a:focus {
 	/* None in this theme */
 }
 
@@ -460,7 +477,8 @@ img.size-full {
 /* Copyright */
 #footer_sub_content {
 	color: #888888;
-	font-size: .9em;
+	font-size: 11px; /* Fallback for older browsers */
+	font-size: .85rem;
 	padding: 20px;
 	text-align: center;
 }
@@ -528,23 +546,23 @@ img.size-full {
 
 /* Elements by location */
 #featured .element {
-	/* Style elements of a custom layout 
+	/* Style elements of a custom layout
 	in the featured area ABOVE the content. */
 }
 #main .element {
-	/* Style elements of a custom layout 
+	/* Style elements of a custom layout
 	in the main content area. */
 }
 #featured_below .element {
-	/* Style elements of a custom layout 
+	/* Style elements of a custom layout
 	in the featured area BELOW the content. */
 }
 
 /* =Optimized for Tablets
 ------------------------------------------------- */
 
-@media (max-width: 979px) {	
-	
+@media (max-width: 979px) {
+
 	/* Primary Structure */
 	#top #branding,
 	#featured .featured-inner,
@@ -563,15 +581,16 @@ img.size-full {
 	#featured_below {
 		padding: 20px;
 	}
-	
+
 	/* Header */
 	#branding .header_logo {
 		float: none;
 		text-align: center;
 	}
-	
+
 	/* Primary Navigation */
 	#access {
+		background: #f7f7f7;
 		border-right: none;
 		border-radius: 0;
 		display: none;
@@ -591,16 +610,16 @@ img.size-full {
 		border-bottom-right-radius: 0;
 		border-bottom-left-radius: 0;
 	}
-	#access li li a { 
-		padding-left: 20px; 
+	#access li li a {
+		padding-left: 20px;
 	}
-	#access li li li a { 
+	#access li li li a {
 		padding-left: 30px;
 	}
 	#access .sf-menu ul {
 		border: none;
-		margin: 0; 
-		position: static; 
+		margin: 0;
+		position: static;
 		width: auto;
 	}
 	#access .sf-menu ul .sf-sub-indicator.icon-caret-right {
@@ -633,7 +652,7 @@ img.size-full {
 ------------------------------------------------- */
 
 @media (max-width: 767px) {
-	
+
 	/* Primary Structure */
 	#top #branding,
 	#featured .featured-inner,
@@ -652,11 +671,12 @@ img.size-full {
 	#featured_below {
 		padding: 20px 30px;
 	}
-	
+
 	/* Typography */
 	h1 {
-	  font-size: 24px;
-	  line-height: 1.3em;
+		font-size: 24px; /* Fallback for older browsers */
+		font-size: 1.85rem;
+		line-height: 1.3em;
 	}
 
 	/* Builder - Slogan */
@@ -665,9 +685,10 @@ img.size-full {
 		float: none;
 		margin: 0 0 10px 0;
 	}
-	.element-slogan .slogan .slogan-text { 
+	.element-slogan .slogan .slogan-text {
 		display: block;
-		font-size: 1.3em;
+		font-size: 17px; /* Fallback for older browsers */
+		font-size: 1.3rem;
 		text-align: center;
 	}
 
@@ -675,15 +696,16 @@ img.size-full {
 	.divider-shadow {
 		background-size:100%;
 	}
-	
+
 	/* Posts */
 	.attachment-small {
 		width:40%;
 	}
-	
+
 	/* Comments */
 	#comments {
-		font-size: .85em;
+		font-size: 11px; /* Fallback for older browsers */
+		font-size: .85rem;
 	}
 	#comments .comment-body {
 		padding: 2px 10px;
